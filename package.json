@@ -3,5 +3,9 @@
     "@tailwindcss/vite": "^4.3.0",
     "clsx": "^2.1.1",
     "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "vite-plugin-svgr": "^5.2.0"
   }
 }
