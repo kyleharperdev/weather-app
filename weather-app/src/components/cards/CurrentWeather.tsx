@@ -4,13 +4,16 @@ import { getWeather } from '../../api'
 import Card from './Card'
 import WeatherIcon from '../WeatherIcon'
 
-type Props = {}
+type Props = {
+  lat: number
+  lon: number
+}
 
-export default function CurrentWeather({}: Props) {
+export default function CurrentWeather({ lat, lon }: Props) {
     const {data} = useSuspenseQuery({
-    queryKey: ['weather'],
-    queryFn: () => getWeather({lat: 20, lon: 50})
-  })
+    queryKey: ['weather', lat, lon],
+    queryFn: () => getWeather({lat, lon})
+    })
   return (
     <Card 
     title='Current Weather' 

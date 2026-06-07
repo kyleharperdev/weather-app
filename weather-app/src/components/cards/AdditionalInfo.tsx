@@ -9,13 +9,16 @@ import Uv from '/src/assets/uv-index.svg?react'
 import Wind from '/src/assets/wind.svg?react'
 import UpArrow from "/src/assets/up-arrow.svg?react"
 
-type Props = {}
+type Props = {
+  lat: number
+  lon: number
+}
 
-export default function AdditionalInfo({}: Props) {
+export default function AdditionalInfo({lat, lon}: Props) {
     const {data} = useSuspenseQuery({
-    queryKey: ['weather'],
-    queryFn: () => getWeather({lat: 20, lon: 50})
-  })
+    queryKey: ['weather', lat, lon],
+    queryFn: () => getWeather({lat, lon})
+    })
   return (
     <Card title='Additional Weather Info' ChildrenClassName='flex flex-col gap-8'>
         {rows.map(({label, value, Icon }) => (
