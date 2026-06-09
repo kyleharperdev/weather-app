@@ -5,10 +5,14 @@ import HourlyForecast from "./components/cards/HourlyForecast"
 import CurrentWeather from "./components/cards/CurrentWeather"
 import AdditionalInfo from "./components/cards/AdditionalInfo"
 import Map from "./components/Map"
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import LocationDropdown from "./components/dropdowns/LocationDropdown"
 import MapTypeDropdown from "./components/dropdowns/MapTypeDropdown"
 import MapLegend from "./components/MapLegend"
+import CurrentSkeleton from "./components/skeletons/CurrentSkeleton"
+import DailySkeleton from "./components/skeletons/DailySkeleton"
+import HourlySkeleton from "./components/skeletons/HourlySkeleton"
+import AdditionalSkeleton from "./components/skeletons/AdditionalSkeleton"
 
 
 function App() {
@@ -43,10 +47,21 @@ function App() {
         <Map setLocation={setLocation} location={location} mapType={mapType} setSelectedCity={setSelectedCity} />
         <MapLegend mapType={mapType}/>
       </div>
+      <Suspense fallback={<CurrentSkeleton/>}>
       <CurrentWeather lat={location.lat} lon={location.lon} />
-      <HourlyForecast lat={location.lat} lon={location.lon} />
-      <DailyForecast lat={location.lat} lon={location.lon} />
-      <AdditionalInfo lat={location.lat} lon={location.lon} />
+      </Suspense>
+
+      <Suspense fallback={<HourlySkeleton/>}>
+        <HourlyForecast lat={location.lat} lon={location.lon} />
+      </Suspense>
+
+      <Suspense fallback={<DailySkeleton/>}>
+        <DailyForecast lat={location.lat} lon={location.lon} />
+      </Suspense>
+
+      <Suspense fallback={<AdditionalSkeleton/>}>
+        <AdditionalInfo lat={location.lat} lon={location.lon} />
+      </Suspense>
     </div>
   )
 }
