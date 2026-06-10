@@ -11,6 +11,7 @@ import { Button } from './ui/button'
 import Icon from '/src/assets/infoicon.svg?react'
 import { InfoIcon } from 'lucide-react'
 import ChevronLeft from '/src/assets/chevron-left.svg?react'
+import SidePanelSkeleton from './skeletons/SidePanelSkeleton'
 
 type Props = {
     lat: number
@@ -25,7 +26,7 @@ export default function SidePanel({lat, lon, setIsSidePanelOpen, isSidePanelOpen
         <button onClick={() => setIsSidePanelOpen(false)}>
             <ChevronLeft className='size-8 invert -ml-2' />
         </button>
-        <Suspense>
+        <Suspense fallback={<SidePanelSkeleton/>}>
             <AirPollution lat={lat} lon={lon} />
         </Suspense>
     </div>
