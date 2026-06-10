@@ -20,7 +20,7 @@ export default function AdditionalInfo({lat, lon}: Props) {
     queryFn: () => getWeather({lat, lon})
     })
   return (
-    <Card title='Additional Weather Info' ChildrenClassName='flex flex-col gap-8'>
+    <Card title='Additional Weather Info' ChildrenClassName='grid grid-cols-1 md:grid-cols-2 gap-8'>
         {rows.map(({label, value, Icon }) => (
             <div className='flex justify-between' key={value}>
                 <div className='flex gap-4'>

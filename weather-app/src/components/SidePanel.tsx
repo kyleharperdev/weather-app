@@ -22,9 +22,9 @@ type Props = {
 
 export default function SidePanel({lat, lon, setIsSidePanelOpen, isSidePanelOpen,}: Props) {
   return (
-    <div className={clsx('fixed top-0 right-0 h-screen w-90 shadow-md bg-sidebar z-1001 py-8 px-4 overflow-y-scroll transition-transform duration-300', isSidePanelOpen ? 'translate-x-0' : 'translate-x-full')}>
+    <div className={clsx('fixed top-0 right-0 h-screen w-(--sidebar-width) shadow-md bg-sidebar z-1001 py-8 px-4 overflow-y-scroll transition-transform duration-300 lg:translate-x-0!', isSidePanelOpen ? 'translate-x-0' : 'translate-x-full')}>
         <button onClick={() => setIsSidePanelOpen(false)}>
-            <ChevronLeft className='size-8 invert -ml-2' />
+            <ChevronLeft className='size-8 invert -ml-2 lg:hidden' />
         </button>
         <Suspense fallback={<SidePanelSkeleton/>}>
             <AirPollution lat={lat} lon={lon} />
@@ -124,7 +124,7 @@ function AirPollution({lat, lon}: {lat: number, lon: number}) {
                         </div>
                         <div className='flex justify-between'>
                             {Object.keys(pollutant).map(quality => (
-                                <span className={clsx('px-2 py-1 rounded-md text-xs font-medium', quality === currentlevel ? qualityColor : 'bg-muted text-muted-foreground')}>
+                                <span key={quality} className={clsx('px-2 py-1 rounded-md text-xs font-medium', quality === currentlevel ? qualityColor : 'bg-muted text-muted-foreground')}>
                                     {quality}
                                 </span>
                             ))}

@@ -95,5 +95,5 @@ L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{
     ).addTo(mapInstanceRef.current)
   }, [mapType])
 
-  return <div ref={mapRef} style={{ width: '100%', height: '500px', cursor: 'crosshair' }} />
+  return <div ref={mapRef} style={{ width: '100%', height: '100%', cursor: 'crosshair' }} />
 }

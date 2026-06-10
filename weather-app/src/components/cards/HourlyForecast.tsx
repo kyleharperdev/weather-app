@@ -22,14 +22,14 @@ export default function HourlyForecast({lat, lon}: Props) {
     ChildrenClassName='flex gap-6 overflow-x-scroll'
     >
         {data.hourly.map(hour => (
-            <div key={hour.dt} className='flex flex-col gap-2 items-center p-2 uppercase'>
-                <p className='whitespace-nowrap'>{new Date(hour.dt * 1000).toLocaleTimeString(undefined, {
+            <div key={hour.dt} className='flex flex-col 2xl:justify-between gap-2 items-center p-2 uppercase'>
+                <p className='whitespace-nowrap 2xl:scale-110'>{new Date(hour.dt * 1000).toLocaleTimeString(undefined, {
                     hour: 'numeric',
                     minute: '2-digit',
                     hour12: true,
                 })}</p>
-                <WeatherIcon src={hour.weather[0].icon} />
-                <p>{Math.round(hour.temp)}°C</p>
+                <WeatherIcon ClassName='2xl:size-10' src={hour.weather[0].icon} />
+                <p className='2xl:scale-110'>{Math.round(hour.temp)}°C</p>
             </div>
         ))}
     </Card>

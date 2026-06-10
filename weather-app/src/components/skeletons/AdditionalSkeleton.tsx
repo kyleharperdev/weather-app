@@ -6,7 +6,7 @@ type Props = {}
 
 export default function AdditionalSkeleton({}: Props) {
   return (
-        <Card title='Additional Weather Info' ChildrenClassName='flex flex-col gap-8'>
+        <Card title='Additional Weather Info' ChildrenClassName='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {Array.from({length: 6}).map((_, index) => (
                 <div className='flex justify-between' key={index}>
                     <div className='flex gap-4'>

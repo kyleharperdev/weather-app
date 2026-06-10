@@ -8,7 +8,7 @@ type Props = {}
 
 export default function DailySkeleton({}: Props) {
   return (
-          <Card title="Daily Forecast" ChildrenClassName='flex flex-col gap-4'>
+          <Card title="Daily Forecast" ChildrenClassName='flex flex-col gap-4 2xl:justify-between'>
               {Array.from({length: 8}).map((_, index) => (
                 <div key={index} className='flex justify-between'>
                   <Skeleton className='w-9 h-8' />
