@@ -14,7 +14,7 @@ export default function LocationDropdown({ setLocation, selectedCity, setSelecte
           setLocation({ lat: city.lat, lon: city.lon})
           setSelectedCity(value)
     }}}>
-  <SelectTrigger className="w-full xs:w-45">
+  <SelectTrigger className="w-full xs:w-[180px]">
     <SelectValue placeholder="Location" />
   </SelectTrigger>
   <SelectContent className='z-1001'>
