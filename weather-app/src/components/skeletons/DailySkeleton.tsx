@@ -1,9 +1,9 @@
 import Card from '../cards/Card'
 import { Skeleton } from '../ui/skeleton'
 
-type Props = {}
 
-export default function DailySkeleton({}: Props) {
+
+export default function DailySkeleton({}) {
   return (
           <Card title="Daily Forecast" ChildrenClassName='flex flex-col gap-4 2xl:justify-between'>
               {Array.from({length: 8}).map((_, index) => (

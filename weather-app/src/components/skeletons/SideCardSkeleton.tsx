@@ -1,9 +1,9 @@
 import Card from '../cards/Card'
 import { Skeleton } from '../ui/skeleton'
 
-type Props = {}
 
-export default function SideCardSkeleton({}: Props) {
+
+export default function SideCardSkeleton({}) {
   return (
         <Card 
             className='hover:scale-105 transition-transform duration-300 from-sidebar-accent to-sidebar-accent/60 gap-0!'

@@ -1,7 +1,6 @@
 import Card from './Card'
 import {  useSuspenseQuery } from '@tanstack/react-query'
 import { getWeather } from '../../api'
-import { date } from 'zod'
 import WeatherIcon from '../WeatherIcon'
 
 type Props = {

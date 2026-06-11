@@ -1,4 +1,3 @@
-import { LogIn } from "lucide-react"
 import { z } from "zod"
 
 const AirPollutionSchema = z.object({

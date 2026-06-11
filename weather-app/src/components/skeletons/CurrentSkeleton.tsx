@@ -1,9 +1,8 @@
 import Card from '../cards/Card'
 import { Skeleton } from '../ui/skeleton'
 
-type Props = {}
 
-export default function CurrentSkeleton({}: Props) {
+export default function CurrentSkeleton({}) {
   return (
         <Card 
         title='Current Weather' 
