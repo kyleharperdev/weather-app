@@ -16,7 +16,7 @@ type Props = {
 }
 
 // Fix for broken default Leaflet marker icons in Vite
-delete (L.Icon.Default.prototype as any)._getIconUrl
+delete (L.Icon.Default.prototype as { _getIconUrl?: unknown })._getIconUrl
 L.Icon.Default.mergeOptions({
   iconUrl: markerIcon,
   iconRetinaUrl: markerIcon2x,
@@ -80,7 +80,7 @@ L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{
     try {
       mapInstanceRef.current.panTo([location.lat, location.lon])
       markerRef.current.setLatLng([location.lat, location.lon])
-    } catch (e) {
+    } catch {
       // panTo can throw if the map was destroyed between renders, safe to ignore
     }
   }, [location])

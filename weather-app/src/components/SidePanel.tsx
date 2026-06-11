@@ -45,7 +45,7 @@ function AirPollution({lat, lon}: {lat: number, lon: number}) {
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger>
-                            <InfoIcon className='size-4 dark:text-white' />
+                            <InfoIcon className='size-4 text-foreground dark:text-background' />
                         </TooltipTrigger>
                         <TooltipContent className='z-2000'>
                             <p className='max-w-xs'>
@@ -101,7 +101,7 @@ function AirPollution({lat, lon}: {lat: number, lon: number}) {
                             <TooltipProvider>
                                 <Tooltip>
                                 <TooltipTrigger>
-                                    <InfoIcon className='size-4 dark:text-white' />
+                                    <InfoIcon className='size-4 text-foreground dark:text-background' />
                                 </TooltipTrigger>
                         <TooltipContent className='z-2000'>
                             <p className='max-w-xs'>

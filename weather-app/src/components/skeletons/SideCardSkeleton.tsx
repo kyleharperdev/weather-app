@@ -3,7 +3,7 @@ import { Skeleton } from '../ui/skeleton'
 
 
 
-export default function SideCardSkeleton({}) {
+export default function SideCardSkeleton() {
   return (
         <Card 
             className='hover:scale-105 transition-transform duration-300 from-sidebar-accent to-sidebar-accent/60 gap-0!'

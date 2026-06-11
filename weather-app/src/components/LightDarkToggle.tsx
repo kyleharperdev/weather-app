@@ -4,7 +4,7 @@ import Moon from '/src/assets/moon.svg?react'
 import { useTheme } from './ThemeProvider'
 
 
-export default function LightDarkToggle({}) {
+export default function LightDarkToggle() {
   const {theme, toggleTheme} = useTheme()
   return (
     <div className='flex items-center gap-2'>

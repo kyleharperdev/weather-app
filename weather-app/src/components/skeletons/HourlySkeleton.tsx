@@ -2,7 +2,7 @@ import Card from '../cards/Card'
 import { Skeleton } from '../ui/skeleton'
 
 
-export default function HourlySkeleton({}) {
+export default function HourlySkeleton() {
   return (
         <Card 
         title='Hourly Forecast (48 Hours)' 

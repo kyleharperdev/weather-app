@@ -2,7 +2,7 @@ import Card from '../cards/Card'
 import { Skeleton } from '../ui/skeleton'
 
 
-export default function CurrentSkeleton({}) {
+export default function CurrentSkeleton() {
   return (
         <Card 
         title='Current Weather' 
