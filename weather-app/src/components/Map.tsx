@@ -44,8 +44,8 @@ export default function Map({ setLocation, location, mapType, setSelectedCity }:
 
 
   // Base dark tiles
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-  attribution: '© Stadia Maps © OpenMapTiles © OpenStreetMap'
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '© OpenStreetMap © CARTO'
 }).addTo(map)
 
     // Weather overlay layer from OpenWeatherMap
