@@ -1,14 +1,11 @@
 import { getAirPollution } from '@/api'
 import { useSuspenseQuery } from '@tanstack/react-query'
-import React, { Suspense, type Dispatch, type SetStateAction } from 'react'
+import { Suspense, type Dispatch, type SetStateAction } from 'react'
 import Card from './cards/Card'
 import { Slider } from './ui/slider'
-import { object, type maxLength } from 'zod'
 import clsx from 'clsx'
 import { Tooltip, TooltipProvider } from './ui/tooltip'
 import { TooltipContent, TooltipTrigger } from './ui/tooltip'
-import { Button } from './ui/button'
-import Icon from '/src/assets/infoicon.svg?react'
 import { InfoIcon } from 'lucide-react'
 import ChevronLeft from '/src/assets/chevron-left.svg?react'
 import SidePanelSkeleton from './skeletons/SidePanelSkeleton'
@@ -48,7 +45,7 @@ function AirPollution({lat, lon}: {lat: number, lon: number}) {
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger>
-                            <InfoIcon className='size-4 col-white' />
+                            <InfoIcon className='size-4 dark:text-white' />
                         </TooltipTrigger>
                         <TooltipContent className='z-2000'>
                             <p className='max-w-xs'>
@@ -104,7 +101,7 @@ function AirPollution({lat, lon}: {lat: number, lon: number}) {
                             <TooltipProvider>
                                 <Tooltip>
                                 <TooltipTrigger>
-                                    <InfoIcon className='size-4 col-white' />
+                                    <InfoIcon className='size-4 dark:text-white' />
                                 </TooltipTrigger>
                         <TooltipContent className='z-2000'>
                             <p className='max-w-xs'>

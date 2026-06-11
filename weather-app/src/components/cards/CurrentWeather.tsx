@@ -1,5 +1,4 @@
 import { useSuspenseQuery } from '@tanstack/react-query'
-import React from 'react'
 import { getWeather } from '../../api'
 import Card from './Card'
 import WeatherIcon from '../WeatherIcon'
@@ -51,7 +50,7 @@ export default function CurrentWeather({ lat, lon }: Props) {
             </div>
             <div className='flex flex-col gap-2 items-center'>
                 <p className='text-gray-500'>Wind</p>
-                <p>{Math.round(data.current.wind_speed)}mph</p>
+                <p>{Math.round(data.current.wind_speed * 2.237)}mph</p>
             </div>
         </div>
     </Card>

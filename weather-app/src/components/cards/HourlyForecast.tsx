@@ -1,6 +1,5 @@
-import React from 'react'
 import Card from './Card'
-import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
+import {  useSuspenseQuery } from '@tanstack/react-query'
 import { getWeather } from '../../api'
 import { date } from 'zod'
 import WeatherIcon from '../WeatherIcon'

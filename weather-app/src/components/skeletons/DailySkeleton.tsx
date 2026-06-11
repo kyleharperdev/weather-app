@@ -1,7 +1,4 @@
-import React from 'react'
 import Card from '../cards/Card'
-import WeatherIcon from '../WeatherIcon'
-import { array } from 'zod'
 import { Skeleton } from '../ui/skeleton'
 
 type Props = {}
