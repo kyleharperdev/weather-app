@@ -2,7 +2,7 @@
 
 A full-stack weather dashboard built with React, TypeScript, and the OpenWeatherMap API. Features an interactive map, live weather data, multi-layer weather overlays, and a detailed air pollution breakdown.
 
-![({Image}.png)]
+Image included
 
 ## Features
 
