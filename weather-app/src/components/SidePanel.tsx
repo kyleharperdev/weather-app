@@ -19,7 +19,7 @@ type Props = {
 
 export default function SidePanel({lat, lon, setIsSidePanelOpen, isSidePanelOpen,}: Props) {
   return (
-    <div className={clsx('fixed top-0 right-0 h-screen w-(--sidebar-width) shadow-md bg-sidebar z-1001 py-8 px-4 overflow-y-scroll transition-transform duration-300 lg:translate-x-0!', isSidePanelOpen ? 'translate-x-0' : 'translate-x-full')}>
+    <div className={clsx('fixed top-0 right-0 h-screen w-(--sidebar-width) max-w-full shadow-md bg-sidebar z-1001 py-8 px-4 overflow-y-scroll transition-transform duration-300 lg:translate-x-0!', isSidePanelOpen ? 'translate-x-0' : 'translate-x-full')}>
         <button onClick={() => setIsSidePanelOpen(false)}>
             <ChevronLeft className='size-8  -ml-2 lg:hidden' />
         </button>
