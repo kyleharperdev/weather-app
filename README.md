@@ -1,8 +1,10 @@
 # Weather App
 
-A full-stack weather dashboard built with React, TypeScript, and the OpenWeatherMap API. Features an interactive map, live weather data, multi-layer weather overlays, and a detailed air pollution breakdown.
+A weather dashboard built with React, TypeScript, and the OpenWeatherMap API. It has an interactive map, live weather data, multi-layer weather overlays, and a detailed air pollution breakdown.
 
-Image included
+> I built this by following an in-depth tutorial, as a way to learn modern React — TanStack Query, Suspense-based data loading, lifting state up, runtime validation with Zod, and wiring an imperative library (Leaflet) into React with refs. The structure and patterns follow the tutorial; I worked through it to understand how the pieces fit together rather than to ship something original.
+
+![Weather dashboard screenshot](screenshot.png)
 
 ## Features
 
@@ -29,7 +31,6 @@ Image included
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js (v18 or higher)
 - An OpenWeatherMap API key with access to the One Call 3.0 API ([sign up here](https://openweathermap.org/api))
 
@@ -37,25 +38,21 @@ Image included
 
 1. Clone the repository:
 ```bash
-   git clone https://github.com/asklfxue/weather-app
-   cd weather-app
+git clone https://github.com/kyleharperdev/weather-app
+cd weather-app
 ```
-
 2. Install dependencies:
 ```bash
-   npm install
+npm install
 ```
-
 3. Create a `.env.local` file in the project root and add your API key:
 ```
-   VITE_API_KEY=your_openweathermap_api_key_here
+VITE_API_KEY=your_openweathermap_api_key_here
 ```
-
 4. Start the development server:
 ```bash
-   npm run dev
+npm run dev
 ```
-
 5. Open the local URL shown in your terminal (usually `http://localhost:5173`).
 
 ## Available Scripts
@@ -81,7 +78,3 @@ src/
 ├── schemas/                  # Zod schemas for API responses
 └── App.tsx                   # Root component and state
 ```
-
-## Notes
-
-This project was built as a learning exercise to practise modern React patterns — lifting state up, Suspense-based data loading, runtime type validation, and integrating an imperative third-party library (Leaflet) with React via refs.
