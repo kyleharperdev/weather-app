@@ -4,7 +4,7 @@ A weather dashboard built with React, TypeScript, and the OpenWeatherMap API. It
 
 > I built this by following an in-depth tutorial, as a way to learn modern React — TanStack Query, Suspense-based data loading, lifting state up, runtime validation with Zod, and wiring an imperative library (Leaflet) into React with refs. The structure and patterns follow the tutorial; I worked through it to understand how the pieces fit together rather than to ship something original.
 
-![Weather dashboard screenshot](screenshot.png)
+![Weather dashboard screenshot](Image.png)
 
 ## Features
 
