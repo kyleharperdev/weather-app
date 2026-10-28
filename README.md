@@ -28,40 +28,6 @@ A weather dashboard built with React, TypeScript, and the OpenWeatherMap API. It
 - **Leaflet** — interactive maps
 - **OpenWeatherMap API** — weather, map tiles, and air pollution data
 
-## Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- An OpenWeatherMap API key with access to the One Call 3.0 API ([sign up here](https://openweathermap.org/api))
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/kyleharperdev/weather-app
-cd weather-app
-```
-2. Install dependencies:
-```bash
-npm install
-```
-3. Create a `.env.local` file in the project root and add your API key:
-```
-VITE_API_KEY=your_openweathermap_api_key_here
-```
-4. Start the development server:
-```bash
-npm run dev
-```
-5. Open the local URL shown in your terminal (usually `http://localhost:5173`).
-
-## Available Scripts
-
-- `npm run dev` — start the development server
-- `npm run build` — build for production
-- `npm run preview` — preview the production build locally
-- `npm run lint` — run ESLint
-
 ## Project Structure
 
 ```
